@@ -1,0 +1,82 @@
+{
+    "type":"object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "required":false,
+    "properties":{
+        "pluginLocations": {
+            "type":"object",
+            "required":true,
+            "properties":{
+                "config": {
+                    "type":"object"
+                },
+                "course": {
+                    "type":"object",
+                    "properties": {
+                        "_isEnabled": {
+                            "type":"boolean",
+                            "required":false,
+                            "title": "Enable Trickle",
+                            "inputType": { "type": "Boolean", "options": [false, true]},
+                            "validators": []
+                        },
+                        "title": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Title",
+                            "inputType": "Text",
+                            "validators": [],
+                            "help": "The title for the notification popup"
+                        },
+                        "body": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Body",
+                            "inputType": "TextArea",
+                            "validators": [],
+                            "help": "The body text for the notification popup"
+                        }
+                    }
+                },
+                "contentobject": {
+                    "type":"object",
+                    "properties": {
+                        "_isEnabled": {
+                            "type":"boolean",
+                            "required":false,
+                            "title": "Enable Trickle",
+                            "inputType": { "type": "Boolean", "options": [false, true]},
+                            "validators": []
+                        },
+                        "text": {
+                            "type": "string",
+                            "required": true,
+                            "title": "Text",
+                            "inputType": "Text",
+                            "validators": [],
+                            "help": "The text to display on the button"
+                        },
+                        "instruction": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Instruction",
+                            "inputType": "Text",
+                            "validators": [],
+                            "help": "The text instructing the user to click to return to the menu"
+                        }
+                    }
+                },
+                "article": {
+                    "type":"object"
+                },
+                "block": {
+                    "type":"object"
+                },
+                "component": {
+                    "type":"object"
+                }
+            }
+        }
+    }
+}

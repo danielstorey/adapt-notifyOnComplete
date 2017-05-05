@@ -1,0 +1,17 @@
+{
+  "name": "adapt-notifyOnComplete",
+  "version": "1.0.0",
+  "framework": "^2.0.0",
+  "homepage": "",
+  "issues": "",
+  "displayName" : "Notify on Complete",
+  "component" : "notifyOnComplete",
+  "description": "Simply displays a message if the course is complete",
+  "main": "/js/adapt-notifyOnComplete.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_notifyOnComplete"
+}
