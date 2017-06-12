@@ -49,21 +49,21 @@
                             "inputType": { "type": "Boolean", "options": [false, true]},
                             "validators": []
                         },
-                        "text": {
+                        "title": {
                             "type": "string",
                             "required": true,
                             "title": "Text",
                             "inputType": "Text",
                             "validators": [],
-                            "help": "The text to display on the button"
+                            "help": "The title for the push notification"
                         },
-                        "instruction": {
+                        "body": {
                             "type": "string",
                             "required": false,
-                            "title": "Instruction",
-                            "inputType": "Text",
+                            "title": "Body",
+                            "inputType": "TextArea",
                             "validators": [],
-                            "help": "The text instructing the user to click to return to the menu"
+                            "help": "The body text for the push notification"
                         }
                     }
                 },

@@ -1,0 +1,13 @@
+//course.json
+"_notifyOnComplete": {
+    "_isEnabled": true,
+    "title": "COURSE COMPLETE",
+    "body": "Well done! You have completed the course and may now close this window."
+}
+    
+//contentObjects.json
+"_notifyOnComplete": {
+    "_isEnabled": true,
+    "title": "SECTION COMPLETE",
+    "body": "You have completed this section. Click the back button to return to the menu."
+}

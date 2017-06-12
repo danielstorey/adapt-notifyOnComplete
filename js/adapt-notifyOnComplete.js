@@ -21,9 +21,17 @@ define([
     }
 
     function onContentObjectComplete(pageModel) {
-        if (!Adapt.course.get("_isComplete")) {
-            new NotifyOnCompleteView({model: pageModel}).$el.appendTo(".page");
+        if (Adapt.course.get("_isComplete")) {
+            return;
         }
+
+        var notifyConfig = pageModel.get("_notifyOnComplete");
+        Adapt.trigger("notify:push", {
+            title: notifyConfig.title,
+            body: notifyConfig.body,
+            _timeout: 5000,
+            _callbackEvent: "navigation:backButton"
+        });
     }
 
     function onCourseComplete(courseModel) {
@@ -31,34 +39,12 @@ define([
 
         if (assessment && assessment._requireAssessmentPassed && !courseModel.get("_isAssessmentPassed")) return;
 
+      var notifyConfig = courseModel.get("_notifyOnComplete");
         Adapt.trigger("notify:popup", {
-            title: notify.title,
-            body: notify.body
+            title: notifyConfig.title,
+            body: notifyConfig.body
         });
     }
-
-    var NotifyOnCompleteView = Backbone.View.extend({
-
-        events: {
-            "click .notifyoncomplete-button": "onButtonClicked"
-        },
-
-        initialize: function() {
-            this.listenTo(Adapt, 'remove', this.remove);
-            this.render();
-        },
-
-        render: function() {
-            var data = this.model.toJSON();
-            var template = Handlebars.templates['notifyOnComplete'];
-            this.$el.html(template(data));
-            return this;
-        },
-
-        onButtonClicked: function() {
-            Backbone.history.navigate('#', {trigger:true});
-        }
-    });
 
     Adapt.once("app:dataLoaded", onDataReady);
 });
