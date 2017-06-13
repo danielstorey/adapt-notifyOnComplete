@@ -17,7 +17,7 @@
                         "_isEnabled": {
                             "type":"boolean",
                             "required":false,
-                            "title": "Enable Trickle",
+                            "title": "Enable on Course",
                             "inputType": { "type": "Boolean", "options": [false, true]},
                             "validators": []
                         },
@@ -45,7 +45,7 @@
                         "_isEnabled": {
                             "type":"boolean",
                             "required":false,
-                            "title": "Enable Trickle",
+                            "title": "Enable on Page",
                             "inputType": { "type": "Boolean", "options": [false, true]},
                             "validators": []
                         },
