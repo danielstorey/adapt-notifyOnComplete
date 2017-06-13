@@ -2,9 +2,7 @@
 
 **Notify on Complete** is an *extension* for the Adapt Framework created by Dan storey.
 
-When the learner completes a content object a push notification appear. When enabled on the course itself a notification popup appears when the course is complete and any required assessments are passed. 
-
-[**Click here for an interactive demo**](https://danielstorey.github.io/adapt-demo-course/#/id/co-main)
+When the learner completes a content object a push notification appears. When enabled on the course itself a notification popup appears when the course is complete and any required assessments are passed. 
 
 ##Installation
 
@@ -28,6 +26,6 @@ The attributes listed below are used in *course.json* and *contentObjects.json* 
 No known limitations
 
 ----------------------------
-**Version number:**  1.0.0
+**Version number:**  1.0.2
 **Framework versions:**  2.0
 **Author / maintainer:** Dan Storey
