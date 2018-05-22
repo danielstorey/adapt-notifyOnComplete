@@ -1,4 +1,4 @@
-# adapt-dragndrop
+# adapt-notifyOnComplete
 
 **Notify on Complete** is an *extension* for the Adapt Framework created by Dan storey.
 
