@@ -3,80 +3,55 @@
     "$schema": "http://json-schema.org/draft-04/schema",
     "id": "http://jsonschema.net",
     "required":false,
-    "properties":{
-        "pluginLocations": {
-            "type":"object",
-            "required":true,
-            "properties":{
-                "config": {
-                    "type":"object"
-                },               
-                "contentobject": {
-                    "type":"object",
-                    "properties": {
-                        "_isEnabled": {
-                            "type":"boolean",
-                            "required":false,
-                            "title": "Enable on Page",
-                            "inputType": { "type": "Boolean", "options": [false, true]},
-                            "validators": []
-                        },
-                        "title": {
-                            "type": "string",
-                            "required": true,
-                            "title": "Text",
-                            "inputType": "Text",
-                            "validators": [],
-                            "help": "The title for the push notification"
-                        },
-                        "body": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Body",
-                            "inputType": "TextArea",
-                            "validators": [],
-                            "help": "The body text for the push notification"
-                        }
-                    }
+   "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "_elfh_homeRedirect": {
+              "type": "object",
+              "required": false,
+              "legend": "Home Redirect",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Enable Home Redirect",
+                  "inputType": "Checkbox",
+                  "help": "Turn on to enable redirection"
                 },
-                "article": {
-                    "type":"object"
-                },
-                "block": {
-                    "type":"object"
-                },
-                "component": {
-                    "type":"object"
-                },
-                "course": {
-                    "type":"object",
-                    "properties": {
-                        "_isEnabled": {
-                            "type":"boolean",
-                            "required":false,
-                            "title": "Enable on Course",
-                            "inputType": { "type": "Boolean", "options": [false, true]},
-                            "validators": []
-                        },
-                        "title": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Title",
-                            "inputType": "Text",
-                            "validators": [],
-                            "help": "The title for the notification popup"
-                        },
-                        "body": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Body",
-                            "inputType": "TextArea",
-                            "validators": [],
-                            "help": "The body text for the notification popup"
-                        }
-                    }
+                "_redirectURL": {
+                  "type": "string",
+				  "default":"http://www.google.co.uk",
+                  "require": true,
+                  "title": "Redirection URL",
+                  "inputType": "Text",
+				  "validators": ["url"],
+                  "help": "Enter the full URL including http:// prefix"
                 }
+              }
             }
+          }
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object"
         }
+      }
     }
+  }
 }
