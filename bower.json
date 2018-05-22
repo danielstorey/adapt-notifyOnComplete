@@ -5,12 +5,12 @@
   "homepage": "",
   "issues": "",
   "displayName" : "Notify on Complete",
-  "extension" : "notifyOnComplete",
+  "extension" : "Notify on Complete",
   "description": "Simply displays a message if the course is complete",
   "main": "/js/adapt-notifyOnComplete.js",
   "keywords": [
     "adapt-plugin",
-    "adapt-component"
+    "adapt-extension"
   ],
   "license": "GPLv3",
   "targetAttribute": "_notifyOnComplete"
