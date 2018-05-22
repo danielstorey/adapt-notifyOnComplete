@@ -15,14 +15,14 @@
             "_notifyOnComplete": {
               "type": "object",
               "required": false,
-              "legend": "Home Redirect",
+              "legend": "Notify On Complete",
               "properties": {
                 "_isEnabled": {
                   "type": "boolean",
                   "default": true,
-                  "title": "Enable Home Redirect",
+                  "title": "Enable Notify On Complete",
                   "inputType": "Checkbox",
-                  "help": "Turn on to enable redirection"
+                  "help": "Turn on to enable notify on complete"
                 },
                 "_redirectURL": {
                   "type": "string",
