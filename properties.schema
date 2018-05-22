@@ -10,7 +10,22 @@
       "required": true,
       "properties": {
         "config": {
-          "type": "object",
+          "type": "object"         
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
+         "type": "object",
           "properties": {
             "_notifyOnComplete": {
               "type": "object",
@@ -36,21 +51,6 @@
               }
             }
           }
-        },
-        "contentobject": {
-          "type": "object"
-        },
-        "article": {
-          "type": "object"
-        },
-        "block": {
-          "type": "object"
-        },
-        "component": {
-          "type": "object"
-        },
-        "course": {
-          "type": "object"
         }
       }
     }
