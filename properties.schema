@@ -10,35 +10,7 @@
             "properties":{
                 "config": {
                     "type":"object"
-                },
-                "course": {
-                    "type":"object",
-                    "properties": {
-                        "_isEnabled": {
-                            "type":"boolean",
-                            "required":false,
-                            "title": "Enable on Course",
-                            "inputType": { "type": "Boolean", "options": [false, true]},
-                            "validators": []
-                        },
-                        "title": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Title",
-                            "inputType": "Text",
-                            "validators": [],
-                            "help": "The title for the notification popup"
-                        },
-                        "body": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Body",
-                            "inputType": "TextArea",
-                            "validators": [],
-                            "help": "The body text for the notification popup"
-                        }
-                    }
-                },
+                },               
                 "contentobject": {
                     "type":"object",
                     "properties": {
@@ -75,6 +47,34 @@
                 },
                 "component": {
                     "type":"object"
+                },
+                "course": {
+                    "type":"object",
+                    "properties": {
+                        "_isEnabled": {
+                            "type":"boolean",
+                            "required":false,
+                            "title": "Enable on Course",
+                            "inputType": { "type": "Boolean", "options": [false, true]},
+                            "validators": []
+                        },
+                        "title": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Title",
+                            "inputType": "Text",
+                            "validators": [],
+                            "help": "The title for the notification popup"
+                        },
+                        "body": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Body",
+                            "inputType": "TextArea",
+                            "validators": [],
+                            "help": "The body text for the notification popup"
+                        }
+                    }
                 }
             }
         }
