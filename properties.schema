@@ -71,15 +71,22 @@
                   "inputType": "Checkbox",
                   "help": "Turn on to enable notify on complete"
                 },
-                "_redirectURL": {
-                  "type": "string",
-				  "default":"http://www.google.co.uk",
-                  "require": true,
-                  "title": "Redirection URL",
-                  "inputType": "Text",
-				  "validators": ["url"],
-                  "help": "Enter the full URL including http:// prefix"
-                }
+                "title": {
+                            "type": "string",
+                            "required": true,
+                            "title": "Text",
+                            "inputType": "Text",
+                            "validators": [],
+                            "help": "The title for the push notification"
+               	},
+		 "body": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Body",
+                            "inputType": "TextArea",
+                            "validators": [],
+                            "help": "The body text for the push notification"
+                }		
               }
             }
           }
