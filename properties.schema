@@ -13,7 +13,32 @@
           "type": "object"         
         },
         "contentobject": {
-          "type": "object"
+                "type": "object",
+          "properties": {
+            "_notifyOnComplete": {
+              "type": "object",
+              "required": false,
+              "legend": "Notify On Complete",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Enable Notify On Complete",
+                  "inputType": "Checkbox",
+                  "help": "Turn on to enable notify on complete"
+                },
+                "_redirectURL": {
+                  "type": "string",
+				  "default":"http://www.google.co.uk",
+                  "require": true,
+                  "title": "Redirection URL",
+                  "inputType": "Text",
+				  "validators": ["url"],
+                  "help": "Enter the full URL including http:// prefix"
+                }
+              }
+            }
+          }
         },
         "article": {
           "type": "object"
