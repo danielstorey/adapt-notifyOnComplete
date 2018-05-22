@@ -12,7 +12,7 @@
         "config": {
           "type": "object",
           "properties": {
-            "_elfh_homeRedirect": {
+            "_notifyOnComplete": {
               "type": "object",
               "required": false,
               "legend": "Home Redirect",
