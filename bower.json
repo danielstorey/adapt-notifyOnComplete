@@ -1,11 +1,11 @@
 {
   "name": "adapt-notifyOnComplete",
-  "version": "1.0.4",
+  "version": "1.0.2",
   "framework": "^2.0.0",
   "homepage": "",
   "issues": "",
   "displayName" : "Notify on Complete",
-  "extension" : "Notify on Complete",
+  "extension" : "notifyOnComplete",
   "description": "Simply displays a message if the course is complete",
   "main": "/js/adapt-notifyOnComplete.js",
   "keywords": [
