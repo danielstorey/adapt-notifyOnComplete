@@ -37,7 +37,7 @@ define([
 
     function onCourseComplete(courseModel) {     
                
-        alert ("onCourseComplete");
+        
         
         var assessment = courseModel.get("_assessment");
 
