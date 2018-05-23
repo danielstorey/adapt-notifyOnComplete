@@ -21,6 +21,7 @@ define([
     }
 
     function onContentObjectComplete(pageModel) {
+        alert ("Content Object Complete");
         if (Adapt.course.get("_isComplete")) {
             return;
         }
@@ -35,6 +36,9 @@ define([
     }
 
     function onCourseComplete(courseModel) {
+        
+        alert ("Course Complete");
+        
         var assessment = courseModel.get("_assessment");
 
         if (assessment && assessment._requireAssessmentPassed && !courseModel.get("_isAssessmentPassed")) return;
