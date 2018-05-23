@@ -27,8 +27,7 @@ define([
      
         Adapt.trigger("notify:popup", {
             title: notifyConfig.title,
-            body: notifyConfig.body,
-            _isCancellable: false,
+            body: notifyConfig.body           
         });
  
               
