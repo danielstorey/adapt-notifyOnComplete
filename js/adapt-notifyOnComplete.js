@@ -5,11 +5,11 @@ define([
 
     function onDataReady() {
         var isEnabledOnCourse = isNotifyEnabled(Adapt.course);
-        if (isEnabledOnCourse) {
+        if (isEnabledOnCourse) {           
             Adapt.listenTo(Adapt.course, "change:_isComplete", onCourseComplete);
-        }
-
-        _.each(Adapt.contentObjects.models, function(model) {
+        }     
+        
+         _.each(Adapt.contentObjects.models, function(model) {
             if (isNotifyEnabled(model)) {
                 Adapt.listenTo(model, "change:_isComplete", onContentObjectComplete);
             }
@@ -19,7 +19,7 @@ define([
     function isNotifyEnabled(model) {
         return model.get("_notifyOnComplete") && model.get("_notifyOnComplete")._isEnabled;
     }
-
+    
     function onContentObjectComplete(pageModel) {
         if (Adapt.course.get("_isComplete")) {
             return;
@@ -33,17 +33,24 @@ define([
             _callbackEvent: "navigation:backButton"
         });
     }
+ 
 
-    function onCourseComplete(courseModel) {
+    function onCourseComplete(courseModel) {     
+               
+        
+        
         var assessment = courseModel.get("_assessment");
 
         if (assessment && assessment._requireAssessmentPassed && !courseModel.get("_isAssessmentPassed")) return;
 
-      var notifyConfig = courseModel.get("_notifyOnComplete");
+        var notifyConfig = courseModel.get("_notifyOnComplete");   
+     
         Adapt.trigger("notify:popup", {
             title: notifyConfig.title,
-            body: notifyConfig.body
+            body: notifyConfig.body           
         });
+ 
+              
     }
 
     Adapt.once("app:dataLoaded", onDataReady);

@@ -1,82 +1,97 @@
 {
-    "type":"object",
-    "$schema": "http://json-schema.org/draft-04/schema",
-    "id": "http://jsonschema.net",
-    "required":false,
-    "properties":{
-        "pluginLocations": {
-            "type":"object",
-            "required":true,
-            "properties":{
-                "config": {
-                    "type":"object"
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {},
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"         
+        },
+        "contentobject": {
+                "type": "object",
+          "properties": {
+            "_notifyOnComplete": {
+              "type": "object",
+              "required": false,
+              "legend": "Notify On Complete",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Enable Notify On Complete",
+                  "inputType": "Checkbox",
+                  "help": "Turn on to enable notify on complete"
                 },
-                "course": {
-                    "type":"object",
-                    "properties": {
-                        "_isEnabled": {
-                            "type":"boolean",
-                            "required":false,
-                            "title": "Enable on Course",
-                            "inputType": { "type": "Boolean", "options": [false, true]},
-                            "validators": []
-                        },
-                        "title": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Title",
-                            "inputType": "Text",
-                            "validators": [],
-                            "help": "The title for the notification popup"
-                        },
-                        "body": {
-                            "type": "string",
-                            "required": false,
-                            "title": "Body",
-                            "inputType": "TextArea",
-                            "validators": [],
-                            "help": "The body text for the notification popup"
-                        }
-                    }
-                },
-                "contentobject": {
-                    "type":"object",
-                    "properties": {
-                        "_isEnabled": {
-                            "type":"boolean",
-                            "required":false,
-                            "title": "Enable on Page",
-                            "inputType": { "type": "Boolean", "options": [false, true]},
-                            "validators": []
-                        },
-                        "title": {
+                "title": {
                             "type": "string",
                             "required": true,
                             "title": "Text",
                             "inputType": "Text",
                             "validators": [],
                             "help": "The title for the push notification"
-                        },
-                        "body": {
+               	},		
+		 "body": {
                             "type": "string",
                             "required": false,
                             "title": "Body",
                             "inputType": "TextArea",
                             "validators": [],
                             "help": "The body text for the push notification"
-                        }
-                    }
-                },
-                "article": {
-                    "type":"object"
-                },
-                "block": {
-                    "type":"object"
-                },
-                "component": {
-                    "type":"object"
                 }
+              }
             }
+          }
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
+         "type": "object",
+          "properties": {
+            "_notifyOnComplete": {
+              "type": "object",
+              "required": false,
+              "legend": "Notify On Complete",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Enable Notify On Complete",
+                  "inputType": "Checkbox",
+                  "help": "Turn on to enable notify on complete"
+                },
+                "title": {
+                            "type": "string",
+                            "required": true,
+                            "title": "Text",
+                            "inputType": "Text",
+                            "validators": [],
+                            "help": "The title for the push notification"
+               	},
+		 "body": {
+                            "type": "string",
+                            "required": false,
+                            "title": "Body",
+                            "inputType": "TextArea",
+                            "validators": [],
+                            "help": "The body text for the push notification"
+                }		
+              }
+            }
+          }
         }
+      }
     }
+  }
 }
