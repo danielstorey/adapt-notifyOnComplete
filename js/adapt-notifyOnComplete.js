@@ -30,7 +30,7 @@ define([
       var notifyConfig = courseModel.get("_notifyOnComplete");
        
         
-        Adapt.trigger('notify:push', {body: 'Ah, push it (get up on this)'});
+      
     }
 
     Adapt.once("app:dataLoaded", onDataReady);
