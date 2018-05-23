@@ -45,13 +45,7 @@ define([
         if (assessment && assessment._requireAssessmentPassed && !courseModel.get("_isAssessmentPassed")) return;
 
       var notifyConfig = courseModel.get("_notifyOnComplete");
-        /*
-        Adapt.trigger("notify:popup", {
-            title: notifyConfig.title,
-            body: notifyConfig.body,
-            _isCancellable: false,
-        });
-        */
+       
         
         Adapt.trigger('notify:push', {body: 'Ah, push it (get up on this)'});
     }
