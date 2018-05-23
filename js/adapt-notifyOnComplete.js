@@ -6,6 +6,7 @@ define([
     function onDataReady() {
         var isEnabledOnCourse = isNotifyEnabled(Adapt.course);
         if (isEnabledOnCourse) {
+            alert ("Add listener for course complete");
             Adapt.listenTo(Adapt.course, "change:_isComplete", onCourseComplete);
         }
 
