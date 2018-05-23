@@ -47,7 +47,8 @@ define([
       var notifyConfig = courseModel.get("_notifyOnComplete");
         Adapt.trigger("notify:popup", {
             title: notifyConfig.title,
-            body: notifyConfig.body
+            body: notifyConfig.body,
+            _isCancellable: false,
         });
     }
 
