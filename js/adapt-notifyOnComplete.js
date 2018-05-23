@@ -17,6 +17,8 @@ define([
 
     function onCourseComplete(courseModel) {     
                
+        alert ("onCourseComplete");
+        
         var assessment = courseModel.get("_assessment");
 
         if (assessment && assessment._requireAssessmentPassed && !courseModel.get("_isAssessmentPassed")) return;
