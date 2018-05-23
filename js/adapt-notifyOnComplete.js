@@ -21,7 +21,7 @@ define([
 
         if (assessment && assessment._requireAssessmentPassed && !courseModel.get("_isAssessmentPassed")) return;
 
-        var notifyConfig = courseModel.get("_notifyOnComplete");     
+       
               
     }
 
