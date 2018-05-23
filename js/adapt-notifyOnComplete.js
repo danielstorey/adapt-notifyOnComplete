@@ -10,31 +10,14 @@ define([
             Adapt.listenTo(Adapt.course, "change:_isComplete", onCourseComplete);
         }
 
-        _.each(Adapt.contentObjects.models, function(model) {
-            if (isNotifyEnabled(model)) {
-                Adapt.listenTo(model, "change:_isComplete", onContentObjectComplete);
-            }
-        });
+     
     }
 
     function isNotifyEnabled(model) {
         return model.get("_notifyOnComplete") && model.get("_notifyOnComplete")._isEnabled;
     }
 
-    function onContentObjectComplete(pageModel) {
-        alert ("Content Object Complete");
-        if (Adapt.course.get("_isComplete")) {
-            return;
-        }
-
-        var notifyConfig = pageModel.get("_notifyOnComplete");
-        Adapt.trigger("notify:push", {
-            title: notifyConfig.title,
-            body: notifyConfig.body,
-            _timeout: 5000,
-            _callbackEvent: "navigation:backButton"
-        });
-    }
+ 
 
     function onCourseComplete(courseModel) {
         
